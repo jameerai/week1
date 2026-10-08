@@ -1,0 +1,70 @@
+import 'dart:io';
+
+// Function taking parameters and returning a value
+int add(int a, int b) {
+  return a + b;
+}
+
+// Class with properties and a method
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+
+  void greet() {
+    print("Greeting: Hello, my name is $name");
+  }
+}
+
+void main() {
+  // 1. Variable Declarations
+  int integerVar = 42;
+  double doubleVar = 3.1416;
+  String stringVar = "Hello Dart";
+  bool boolVar = true;
+  List<String> listVar = ["apple", "banana", "cherry"];
+  Map<String, dynamic> mapVar = {"name": "Alice", "age": 25};
+
+  print("--- Variable Demo ---");
+  print("Integer: $integerVar");
+  print("Double: $doubleVar");
+  print("String: $stringVar");
+  print("Boolean: $boolVar");
+  print("List: $listVar");
+  print("Map: $mapVar");
+
+  // 2. Using var, final, and const
+  var city = "London"; // Inferring String type
+  final int finalVar = 100; // Runtime constant
+  const double constVar = 3.14; // Compile-time constant
+
+  print("\n--- final & const ---");
+  print("finalVar = $finalVar");
+  print("constVar = $constVar");
+
+  // 3. Function Call
+  print("\n--- Function Demo ---");
+  int sum = add(5, 7);
+  print("Sum of 5 and 7 = $sum");
+
+  // 4. Control Flow (if-else & for loop)
+  print("\n--- Loop Demo ---");
+  int marks = 75;
+  if (marks >= 50) {
+    // Loop execution
+    stdout.write(""); 
+    for (int i = 1; i <= 5; i++) {
+      stdout.write("$i ");
+    }
+    print("");
+  } else {
+    print("Fail");
+  }
+
+  // 5. Class & Object Creation
+  print("\n--- Class Demo ---");
+  Person person1 = Person("John", 30);
+  print("Person: ${person1.name}, Age: ${person1.age}");
+  person1.greet();
+}
